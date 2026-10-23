@@ -1,0 +1,1 @@
+locator('//frame[@name="frame-top"]').contentFrame().locator('frame[name="frame-middle"]').contentFrame().locator('#content')

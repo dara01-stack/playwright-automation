@@ -235,7 +235,7 @@ test.skip ('deleteApi', async ({ request }) => {
   })
 
     test.skip ('MockApi', async ({ page }) => {
-    await page.route('*/**/api/users/1', async route => {
+    await page.route('*/**/api/v1/fruits', async route => {
         const json = [{name : 'Testing', id:30}]
         await route.fulfill({json})
     })
@@ -276,7 +276,7 @@ test.describe.skip('groutest', () =>
     // }
     
 
-test ('iframetest', async({page})=> {
+test ('iframetest1', async({page})=> {
     await page.goto('https://the-internet.herokuapp.com/nested_frames')
     const testiframe1 = page.frameLocator('//frame[@name="frame-top"]')
     const testsubfram = testiframe1.frameLocator('frame[name="frame-middle"]')

@@ -276,7 +276,7 @@ test.describe.skip('groutest', () =>
     // }
     
 
-test ('iframetest1', async({page})=> {
+test ('iframetest', async({page})=> {
     await page.goto('https://the-internet.herokuapp.com/nested_frames')
     const testiframe1 = page.frameLocator('//frame[@name="frame-top"]')
     const testsubfram = testiframe1.frameLocator('frame[name="frame-middle"]')

@@ -12,6 +12,7 @@ pipeline {
 
                     steps {
                         checkout scm
+                        bat 'npm ci'
                         bat 'npx playwright test --shard=1/3'
                     }
                 }
@@ -21,6 +22,7 @@ pipeline {
 
                     steps {
                         checkout scm
+                        sh 'npm ci'
                         sh 'npx playwright test --shard=2/3'
                     }
                 }
@@ -29,6 +31,7 @@ pipeline {
 
                     steps {
                         checkout scm
+                        sh 'npm ci'
                         sh 'npx playwright test --shard=3/3'
                     }
                 }

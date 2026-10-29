@@ -28,13 +28,13 @@ const metrics = `
   playwright_tests{browser="chromium",status="failed"} ${failed}
   playwright_tests{browser="chromium",status="skipped"} ${skipped}
   playwright_tests{browser="chromium",status="flaky"} ${flaky}
-  playwright_execution_duration_seconds{(browser="chromium"} ${(duration / 1000).toFixed(2)}
+  playwright_execution_duration_seconds{browser="chromium"} ${(duration / 1000).toFixed(2)}
 
   playwright_tests{browser="firefox",status="passed"} ${passed}
   playwright_tests{browser="firefox",status="failed"} ${failed}
   playwright_tests{browser="firefox",status="skipped"} ${skipped}
   playwright_tests{browser="firefox",status="flaky"} ${flaky}
-  playwright_execution_duration_seconds{(browser="firefox"} ${(duration / 1000).toFixed(2)}
+  playwright_execution_duration_seconds{browser="firefox"} ${(duration / 1000).toFixed(2)}
 
   playwright_build_status ${failed > 0 ? 0 : 1}
 `;

@@ -113,18 +113,19 @@ pipeline {
                 bat 'node push-metrics.js'
             }
         }
-    }
-    stage('Publish Reports') {
-    agent { label 'windows' }
+        stage('Publish Reports') {
+        agent { label 'windows' }
 
-    steps {
-        archiveArtifacts artifacts: 'test-results/**'
+        steps {
+            archiveArtifacts artifacts: 'test-results/**'
 
-        allure(
-            includeProperties: false,
-            jdk: '',
-            results: [[path: 'allure-results']]
-        )
+            allure(
+                includeProperties: false,
+                jdk: '',
+                results: [[path: 'allure-results']]
+            )
+        }
     }
+    
 }
 }

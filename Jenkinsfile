@@ -105,6 +105,7 @@ pipeline {
             steps {
                 deleteDir()
                 checkout scm
+                bat 'npm ci'
                 unstash 'shard1-results'
                 unstash 'shard2-results'
                 unstash 'shard3-results'
@@ -113,14 +114,17 @@ pipeline {
             }
         }
     }
-     post {
-        always {
-            archiveArtifacts artifacts: 'test-results/**'
-            allure(
-                includeProperties: false,
-                jdk: '',
-                results: [[path: 'allure-results']]
-            )
-        }
+    stage('Publish Reports') {
+    agent { label 'windows' }
+
+    steps {
+        archiveArtifacts artifacts: 'test-results/**'
+
+        allure(
+            includeProperties: false,
+            jdk: '',
+            results: [[path: 'allure-results']]
+        )
     }
+}
 }

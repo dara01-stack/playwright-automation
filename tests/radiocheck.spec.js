@@ -1,12 +1,12 @@
 import { test, expect } from '@playwright/test';
 test('RadioCheck', async ({ page, context }) => {  
-await context.tracing.start({ screenshots: true, snapshots: true });
+//await context.tracing.start({ screenshots: true, snapshots: true });
 await page.goto('https://demoqa.com/automation-practice-form');
 //await page.getByRole('radio', { name: 'Male' }).click();
 await page.getByRole('textbox',{name: 'First Name'}).fill('FirstName');
 await page.getByRole('textbox',{name: 'Last Name'}).fill('LastName');
 await page.locator('#userNumber').fill('1234534432');
-await page.getByRole('radio', { name: 'Maled', exact: true }).check();
+await page.getByRole('radio', { name: 'Male', exact: true }).check();
 //await page.getByRole('textbox',{name: 'Mobile Number'}).fill('1234567890');
 //await page.locator('//input[@id="gender-radio-1"]').click();
 await page.getByRole('checkbox', { name: 'Sports' }).check();
@@ -30,5 +30,5 @@ await expect(page.getByRole('button', { name: 'Close' })).toBeVisible();
 //await page.pause(); 
 await page.keyboard.press('Escape');
 //await page.getByRole('button', { name: 'Close' }).click();
-await context.tracing.stop({ path: 'trace.zip' });
+//await context.tracing.stop({ path: 'trace.zip' });
 });

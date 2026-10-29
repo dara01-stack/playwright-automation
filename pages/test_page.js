@@ -2,7 +2,7 @@ exports.Logintest =
 class Logintest {
     constructor (page){
         this.page=page
-        this.page.Loguser= page.locator('input[placeholder="Username"]')
+        this.Loguser= page.locator('input[placeholder="Username"]')
         this.Logpws= page.locator('input[placeholder="Password"]')
         this.btn= page.locator('button[type="submit"]')
     }

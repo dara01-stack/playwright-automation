@@ -8,4 +8,3 @@ export const  test = base.extend({loggedInPage: async({page}, use)=>{
     await use(page);
 }
 })
-module.exports = { test };

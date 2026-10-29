@@ -1,0 +1,25 @@
+
+<--- Last few GCs --->
+
+[145312:000001F5F5205000]     1204 ms: Mark-Compact 49.2 (73.4) -> 43.4 (79.4) MB, pooled: 0 MB, 17.49 / 0.00 ms  (+ 0.3 ms in 5 steps since start of marking, biggest step 0.1 ms, walltime since start of marking 61 ms) (average mu = 0.985, current mu = 0.[145312:000001F5F5205000]     7036 ms: Mark-Compact 62.5 (87.4) -> 52.7 (88.2) MB, pooled: 3 MB, 50.46 / 0.06 ms  (average mu = 0.990, current mu = 0.991) external memory pressure; GC in old space requested
+
+FATAL ERROR: Committing semi space failed. Allocation failed - JavaScript heap out of memory
+----- Native stack trace -----
+
+ 1: 00007FF6713190C6 
+ 2: 00007FF671319604 
+ 3: 00007FF66FF23617 
+ 4: 00007FF66FD23E57 
+ 5: 00007FF66FCBC44B 
+ 6: 00007FF66FCE49CA 
+ 7: 00007FF66FD26236 
+ 8: 00007FF66FD25886 
+ 9: 00007FF66FD367E2 
+10: 00007FF66FD3630B 
+11: 00007FF671643BAD 
+12: 00007FF66FD21920 
+13: 00007FF66FD29878 
+14: 00007FF66FB9E674 
+15: 00007FF66FF4AE0E 
+16: 00007FF67135F390 
+17: 000001F5AFDCF64D 

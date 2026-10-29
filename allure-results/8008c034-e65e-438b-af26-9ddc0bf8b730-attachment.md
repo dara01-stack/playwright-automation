@@ -1,0 +1,42 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: authten.spec.js >> netlogin
+- Location: tests\authten.spec.js:6:5
+
+# Error details
+
+```
+TypeError: Cannot read properties of undefined (reading 'fill')
+```
+
+# Test source
+
+```ts
+  1  | exports.Logintest =
+  2  | class Logintest {
+  3  |     constructor (page){
+  4  |         this.page=page
+  5  |         this.page.Loguser= page.locator('input[placeholder="Username"]')
+  6  |         this.Logpws= page.locator('input[placeholder="Password"]')
+  7  |         this.btn= page.locator('button[type="submit"]')
+  8  |     }
+  9  |     async goto(){
+  10 |         await this.page.goto('https://opensource-demo.orangehrmlive.com/web/index.php/auth/login')
+  11 |     }
+  12 |     async login(usr,pwd)
+  13 |     {
+> 14 |         await this.Loguser.fill(usr)
+     |                            ^ TypeError: Cannot read properties of undefined (reading 'fill')
+  15 |         await this.Logpws.fill(pwd)
+  16 |         await this.btn.click()
+  17 | 
+  18 |     }
+  19 | }
+  20 | 
+```

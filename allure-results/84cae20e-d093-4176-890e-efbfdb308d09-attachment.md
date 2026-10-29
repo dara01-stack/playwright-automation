@@ -1,0 +1,916 @@
+# Instructions
+
+- Following Playwright test failed.
+- Explain why, be concise, respect Playwright best practices.
+- Provide a snippet of code with the fix, if possible.
+
+# Test info
+
+- Name: SampleScript.spec.js >> testviacodegen1
+- Location: tests\SampleScript.spec.js:3:1
+
+# Error details
+
+```
+TypeError: Cannot read properties of undefined (reading 'unicode')
+```
+
+# Page snapshot
+
+```yaml
+- generic [ref=e2]:
+  - region "Skip to main content":
+    - link "Skip to main content" [ref=e3] [cursor=pointer]:
+      - /url: "#__docusaurus_skipToContent_fallback"
+  - navigation "Main" [ref=e4]:
+    - generic [ref=e5]:
+      - generic [ref=e6]:
+        - link "Playwright logo Playwright" [ref=e7] [cursor=pointer]:
+          - /url: /
+          - img "Playwright logo" [ref=e9]
+          - generic [ref=e10]: Playwright
+        - link "Docs" [ref=e11] [cursor=pointer]:
+          - /url: /docs/intro
+        - link "MCP" [ref=e12] [cursor=pointer]:
+          - /url: /mcp/introduction
+        - link "CLI" [ref=e13] [cursor=pointer]:
+          - /url: /agent-cli/introduction
+        - link "API" [ref=e14] [cursor=pointer]:
+          - /url: /docs/api/class-playwright
+        - button "Node.js" [ref=e16] [cursor=pointer]
+      - generic [ref=e17]:
+        - link "GitHub repository" [ref=e18] [cursor=pointer]:
+          - /url: https://github.com/microsoft/playwright
+        - link "Discord server" [ref=e19] [cursor=pointer]:
+          - /url: https://aka.ms/playwright/discord
+        - button "Switch between dark and light mode (currently system mode)" [ref=e21] [cursor=pointer]
+        - button "Search (Control+k)" [ref=e25] [cursor=pointer]:
+          - generic [ref=e26]: Search
+          - generic [ref=e31]:
+            - generic [ref=e32]: Ctrl
+            - generic [ref=e33]: K
+  - generic [ref=e36]:
+    - complementary [ref=e37]:
+      - navigation "Docs sidebar" [ref=e40]:
+        - list [ref=e41]:
+          - listitem [ref=e42]:
+            - button "API reference" [expanded] [ref=e44] [cursor=pointer]
+            - list [ref=e46]:
+              - listitem [ref=e47]:
+                - link "Playwright Test" [ref=e48] [cursor=pointer]:
+                  - /url: /docs/api/class-test
+              - listitem [ref=e50]:
+                - link "Playwright Library" [ref=e51] [cursor=pointer]:
+                  - /url: /docs/api/class-playwright
+              - listitem [ref=e53]:
+                - button "Classes" [expanded] [ref=e55] [cursor=pointer]
+                - list [ref=e57]:
+                  - listitem [ref=e58]:
+                    - link "APIRequest" [ref=e59] [cursor=pointer]:
+                      - /url: /docs/api/class-apirequest
+                  - listitem [ref=e61]:
+                    - link "APIRequestContext" [ref=e62] [cursor=pointer]:
+                      - /url: /docs/api/class-apirequestcontext
+                  - listitem [ref=e64]:
+                    - link "APIResponse" [ref=e65] [cursor=pointer]:
+                      - /url: /docs/api/class-apiresponse
+                  - listitem [ref=e67]:
+                    - link "Browser" [ref=e68] [cursor=pointer]:
+                      - /url: /docs/api/class-browser
+                  - listitem [ref=e70]:
+                    - link "BrowserContext" [ref=e71] [cursor=pointer]:
+                      - /url: /docs/api/class-browsercontext
+                  - listitem [ref=e73]:
+                    - link "BrowserServer" [ref=e74] [cursor=pointer]:
+                      - /url: /docs/api/class-browserserver
+                  - listitem [ref=e76]:
+                    - link "BrowserType" [ref=e77] [cursor=pointer]:
+                      - /url: /docs/api/class-browsertype
+                  - listitem [ref=e79]:
+                    - link "CDPSession" [ref=e80] [cursor=pointer]:
+                      - /url: /docs/api/class-cdpsession
+                  - listitem [ref=e82]:
+                    - link "Clock" [ref=e83] [cursor=pointer]:
+                      - /url: /docs/api/class-clock
+                  - listitem [ref=e85]:
+                    - link "ConsoleMessage" [ref=e86] [cursor=pointer]:
+                      - /url: /docs/api/class-consolemessage
+                  - listitem [ref=e88]:
+                    - link "Coverage" [ref=e89] [cursor=pointer]:
+                      - /url: /docs/api/class-coverage
+                  - listitem [ref=e91]:
+                    - link "Credentials" [ref=e92] [cursor=pointer]:
+                      - /url: /docs/api/class-credentials
+                  - listitem [ref=e94]:
+                    - link "Debugger" [ref=e95] [cursor=pointer]:
+                      - /url: /docs/api/class-debugger
+                  - listitem [ref=e97]:
+                    - link "Dialog" [ref=e98] [cursor=pointer]:
+                      - /url: /docs/api/class-dialog
+                  - listitem [ref=e100]:
+                    - link "Download" [ref=e101] [cursor=pointer]:
+                      - /url: /docs/api/class-download
+                  - listitem [ref=e103]:
+                    - link "ElementHandle" [ref=e104] [cursor=pointer]:
+                      - /url: /docs/api/class-elementhandle
+                  - listitem [ref=e106]:
+                    - link "FileChooser" [ref=e107] [cursor=pointer]:
+                      - /url: /docs/api/class-filechooser
+                  - listitem [ref=e109]:
+                    - link "Frame" [ref=e110] [cursor=pointer]:
+                      - /url: /docs/api/class-frame
+                  - listitem [ref=e112]:
+                    - link "FrameLocator" [ref=e113] [cursor=pointer]:
+                      - /url: /docs/api/class-framelocator
+                  - listitem [ref=e115]:
+                    - link "JSHandle" [ref=e116] [cursor=pointer]:
+                      - /url: /docs/api/class-jshandle
+                  - listitem [ref=e118]:
+                    - link "Keyboard" [ref=e119] [cursor=pointer]:
+                      - /url: /docs/api/class-keyboard
+                  - listitem [ref=e121]:
+                    - link "Locator" [ref=e122] [cursor=pointer]:
+                      - /url: /docs/api/class-locator
+                  - listitem [ref=e124]:
+                    - link "Logger" [ref=e125] [cursor=pointer]:
+                      - /url: /docs/api/class-logger
+                  - listitem [ref=e127]:
+                    - link "Mouse" [ref=e128] [cursor=pointer]:
+                      - /url: /docs/api/class-mouse
+                  - listitem [ref=e130]:
+                    - link "Page" [ref=e131] [cursor=pointer]:
+                      - /url: /docs/api/class-page
+                  - listitem [ref=e133]:
+                    - link "Request" [ref=e134] [cursor=pointer]:
+                      - /url: /docs/api/class-request
+                  - listitem [ref=e136]:
+                    - link "Response" [ref=e137] [cursor=pointer]:
+                      - /url: /docs/api/class-response
+                  - listitem [ref=e139]:
+                    - link "Route" [ref=e140] [cursor=pointer]:
+                      - /url: /docs/api/class-route
+                  - listitem [ref=e142]:
+                    - link "Screencast" [ref=e143] [cursor=pointer]:
+                      - /url: /docs/api/class-screencast
+                  - listitem [ref=e145]:
+                    - link "Selectors" [ref=e146] [cursor=pointer]:
+                      - /url: /docs/api/class-selectors
+                  - listitem [ref=e148]:
+                    - link "TimeoutError" [ref=e149] [cursor=pointer]:
+                      - /url: /docs/api/class-timeouterror
+                  - listitem [ref=e151]:
+                    - link "Touchscreen" [ref=e152] [cursor=pointer]:
+                      - /url: /docs/api/class-touchscreen
+                  - listitem [ref=e154]:
+                    - link "Tracing" [ref=e155] [cursor=pointer]:
+                      - /url: /docs/api/class-tracing
+                  - listitem [ref=e157]:
+                    - link "Video" [ref=e158] [cursor=pointer]:
+                      - /url: /docs/api/class-video
+                  - listitem [ref=e160]:
+                    - link "WebError" [ref=e161] [cursor=pointer]:
+                      - /url: /docs/api/class-weberror
+                  - listitem [ref=e163]:
+                    - link "WebMCP" [ref=e164] [cursor=pointer]:
+                      - /url: /docs/api/class-webmcp
+                  - listitem [ref=e166]:
+                    - link "WebSocket" [ref=e167] [cursor=pointer]:
+                      - /url: /docs/api/class-websocket
+                  - listitem [ref=e169]:
+                    - link "WebSocketRoute" [ref=e170] [cursor=pointer]:
+                      - /url: /docs/api/class-websocketroute
+                  - listitem [ref=e172]:
+                    - link "WebStorage" [ref=e173] [cursor=pointer]:
+                      - /url: /docs/api/class-webstorage
+                  - listitem [ref=e175]:
+                    - link "Worker" [ref=e176] [cursor=pointer]:
+                      - /url: /docs/api/class-worker
+              - listitem [ref=e178]:
+                - button "Assertions" [expanded] [ref=e180] [cursor=pointer]
+                - list [ref=e182]:
+                  - listitem [ref=e183]:
+                    - link "APIResponseAssertions" [ref=e184] [cursor=pointer]:
+                      - /url: /docs/api/class-apiresponseassertions
+                  - listitem [ref=e186]:
+                    - link "GenericAssertions" [ref=e187] [cursor=pointer]:
+                      - /url: /docs/api/class-genericassertions
+                  - listitem [ref=e189]:
+                    - link "LocatorAssertions" [ref=e190] [cursor=pointer]:
+                      - /url: /docs/api/class-locatorassertions
+                  - listitem [ref=e192]:
+                    - link "PageAssertions" [ref=e193] [cursor=pointer]:
+                      - /url: /docs/api/class-pageassertions
+                  - listitem [ref=e195]:
+                    - link "SnapshotAssertions" [ref=e196] [cursor=pointer]:
+                      - /url: /docs/api/class-snapshotassertions
+              - listitem [ref=e198]:
+                - button "Test Runner" [expanded] [ref=e200] [cursor=pointer]
+                - list [ref=e202]:
+                  - listitem [ref=e203]:
+                    - link "Fixtures" [ref=e204] [cursor=pointer]:
+                      - /url: /docs/api/class-fixtures
+                  - listitem [ref=e206]:
+                    - link "FullConfig" [ref=e207] [cursor=pointer]:
+                      - /url: /docs/api/class-fullconfig
+                  - listitem [ref=e209]:
+                    - link "FullProject" [ref=e210] [cursor=pointer]:
+                      - /url: /docs/api/class-fullproject
+                  - listitem [ref=e212]:
+                    - link "Location" [ref=e213] [cursor=pointer]:
+                      - /url: /docs/api/class-location
+                  - listitem [ref=e215]:
+                    - link "Playwright Test" [ref=e216] [cursor=pointer]:
+                      - /url: /docs/api/class-test
+                  - listitem [ref=e218]:
+                    - link "TestConfig" [ref=e219] [cursor=pointer]:
+                      - /url: /docs/api/class-testconfig
+                  - listitem [ref=e221]:
+                    - link "TestInfo" [ref=e222] [cursor=pointer]:
+                      - /url: /docs/api/class-testinfo
+                  - listitem [ref=e224]:
+                    - link "TestInfoError" [ref=e225] [cursor=pointer]:
+                      - /url: /docs/api/class-testinfoerror
+                  - listitem [ref=e227]:
+                    - link "TestOptions" [ref=e228] [cursor=pointer]:
+                      - /url: /docs/api/class-testoptions
+                  - listitem [ref=e230]:
+                    - link "TestProject" [ref=e231] [cursor=pointer]:
+                      - /url: /docs/api/class-testproject
+                  - listitem [ref=e233]:
+                    - link "TestStepInfo" [ref=e234] [cursor=pointer]:
+                      - /url: /docs/api/class-teststepinfo
+                  - listitem [ref=e236]:
+                    - link "WorkerInfo" [ref=e237] [cursor=pointer]:
+                      - /url: /docs/api/class-workerinfo
+              - listitem [ref=e239]:
+                - button "Test Reporter" [expanded] [ref=e241] [cursor=pointer]
+                - list [ref=e243]:
+                  - listitem [ref=e244]:
+                    - link "Reporter" [ref=e245] [cursor=pointer]:
+                      - /url: /docs/api/class-reporter
+                  - listitem [ref=e247]:
+                    - link "Suite" [ref=e248] [cursor=pointer]:
+                      - /url: /docs/api/class-suite
+                  - listitem [ref=e250]:
+                    - link "TestCase" [ref=e251] [cursor=pointer]:
+                      - /url: /docs/api/class-testcase
+                  - listitem [ref=e253]:
+                    - link "TestError" [ref=e254] [cursor=pointer]:
+                      - /url: /docs/api/class-testerror
+                  - listitem [ref=e256]:
+                    - link "TestResult" [ref=e257] [cursor=pointer]:
+                      - /url: /docs/api/class-testresult
+                  - listitem [ref=e259]:
+                    - link "TestStep" [ref=e260] [cursor=pointer]:
+                      - /url: /docs/api/class-teststep
+              - listitem [ref=e262]:
+                - button "Experimental" [expanded] [ref=e264] [cursor=pointer]
+                - list [ref=e266]:
+                  - listitem [ref=e267]:
+                    - link "Android" [ref=e268] [cursor=pointer]:
+                      - /url: /docs/api/class-android
+                  - listitem [ref=e270]:
+                    - link "AndroidDevice" [ref=e271] [cursor=pointer]:
+                      - /url: /docs/api/class-androiddevice
+                  - listitem [ref=e273]:
+                    - link "AndroidInput" [ref=e274] [cursor=pointer]:
+                      - /url: /docs/api/class-androidinput
+                  - listitem [ref=e276]:
+                    - link "AndroidSocket" [ref=e277] [cursor=pointer]:
+                      - /url: /docs/api/class-androidsocket
+                  - listitem [ref=e279]:
+                    - link "AndroidWebView" [ref=e280] [cursor=pointer]:
+                      - /url: /docs/api/class-androidwebview
+                  - listitem [ref=e282]:
+                    - link "Electron" [ref=e283] [cursor=pointer]:
+                      - /url: /docs/api/class-electron
+                  - listitem [ref=e285]:
+                    - link "ElectronApplication" [ref=e286] [cursor=pointer]:
+                      - /url: /docs/api/class-electronapplication
+    - main [ref=e288]:
+      - generic [ref=e290]:
+        - generic [ref=e292]:
+          - article [ref=e293]:
+            - navigation "Breadcrumbs" [ref=e294]:
+              - list [ref=e295]:
+                - listitem [ref=e296]:
+                  - link "Home page" [ref=e297] [cursor=pointer]:
+                    - /url: /
+                - listitem [ref=e300]:
+                  - generic [ref=e301]: API reference
+                - listitem [ref=e302]:
+                  - generic [ref=e303]: Test Reporter
+                - listitem [ref=e304]:
+                  - generic [ref=e305]: TestCase
+            - generic [ref=e306]:
+              - heading "TestCase" [level=1] [ref=e308]
+              - paragraph [ref=e309]:
+                - code [ref=e310]: TestCase
+                - text: corresponds to every
+                - link "test()" [ref=e311] [cursor=pointer]:
+                  - /url: /docs/api/class-test#test-call
+                - text: call in a test file. When a single
+                - link "test()" [ref=e312] [cursor=pointer]:
+                  - /url: /docs/api/class-test#test-call
+                - text: is running in multiple projects or repeated multiple times, it will have multiple
+                - code [ref=e313]: TestCase
+                - text: objects in corresponding projects' suites.
+              - separator [ref=e314]
+              - heading [level=2] [ref=e315]:
+                - text: Methods
+                - link "Direct link to Methods" [ref=e316] [cursor=pointer]:
+                  - /url: "#methods"
+                  - text: "#"
+              - heading [level=3] [ref=e317]:
+                - text: ok
+                - link "Direct link to ok" [ref=e318] [cursor=pointer]:
+                  - /url: "#test-case-ok"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e319]: Whether the test is considered running fine. Non-ok tests fail the test run with non-zero exit code.
+              - paragraph [ref=e320]:
+                - strong [ref=e321]: Usage
+              - generic [ref=e323]:
+                - code [ref=e325]:
+                  - generic [ref=e326]: testCase.ok();
+                - button "Copy code to clipboard" [ref=e328] [cursor=pointer]
+              - paragraph [ref=e334]:
+                - strong [ref=e335]: Returns
+              - list [ref=e336]:
+                - listitem [ref=e337]:
+                  - link "boolean" [ref=e338] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Boolean_type
+                  - link "#" [ref=e339] [cursor=pointer]:
+                    - /url: "#test-case-ok-return"
+              - separator [ref=e340]
+              - heading [level=3] [ref=e341]:
+                - text: outcome
+                - link "Direct link to outcome" [ref=e342] [cursor=pointer]:
+                  - /url: "#test-case-outcome"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e343]:
+                - text: Testing outcome for this test. Note that outcome is not the same as
+                - link "testResult.status" [ref=e344] [cursor=pointer]:
+                  - /url: /docs/api/class-testresult#test-result-status
+                - text: ":"
+              - list [ref=e345]:
+                - listitem [ref=e346]:
+                  - text: Test that is expected to fail and actually fails is
+                  - code [ref=e347]: "'expected'"
+                  - text: .
+                - listitem [ref=e348]:
+                  - text: Test that passes on a second retry is
+                  - code [ref=e349]: "'flaky'"
+                  - text: .
+              - paragraph [ref=e350]:
+                - strong [ref=e351]: Usage
+              - generic [ref=e353]:
+                - code [ref=e355]:
+                  - generic [ref=e356]: testCase.outcome();
+                - button "Copy code to clipboard" [ref=e358] [cursor=pointer]
+              - paragraph [ref=e364]:
+                - strong [ref=e365]: Returns
+              - list [ref=e366]:
+                - listitem [ref=e367]:
+                  - text: "\"skipped\" | \"expected\" | \"unexpected\" | \"flaky\""
+                  - link "#" [ref=e368] [cursor=pointer]:
+                    - /url: "#test-case-outcome-return"
+              - separator [ref=e369]
+              - heading [level=3] [ref=e370]:
+                - text: titlePath
+                - link "Direct link to titlePath" [ref=e371] [cursor=pointer]:
+                  - /url: "#test-case-title-path"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e372]: Returns a list of titles from the root down to this test.
+              - paragraph [ref=e373]:
+                - strong [ref=e374]: Usage
+              - generic [ref=e376]:
+                - code [ref=e378]:
+                  - generic [ref=e379]: testCase.titlePath();
+                - button "Copy code to clipboard" [ref=e381] [cursor=pointer]
+              - paragraph [ref=e387]:
+                - strong [ref=e388]: Returns
+              - list [ref=e389]:
+                - listitem [ref=e390]:
+                  - link "Array" [ref=e391] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+                  - text: <
+                  - link "string" [ref=e392] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+                  - text: ">"
+                  - link "#" [ref=e393] [cursor=pointer]:
+                    - /url: "#test-case-title-path-return"
+              - separator [ref=e394]
+              - heading [level=2] [ref=e395]:
+                - text: Properties
+                - link "Direct link to Properties" [ref=e396] [cursor=pointer]:
+                  - /url: "#properties"
+                  - text: "#"
+              - heading [level=3] [ref=e397]:
+                - text: annotations
+                - link "Direct link to annotations" [ref=e398] [cursor=pointer]:
+                  - /url: "#test-case-annotations"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e399]:
+                - link "testResult.annotations" [ref=e400] [cursor=pointer]:
+                  - /url: /docs/api/class-testresult#test-result-annotations
+                - text: of the last test run.
+              - paragraph [ref=e401]:
+                - strong [ref=e402]: Usage
+              - generic [ref=e404]:
+                - code [ref=e406]:
+                  - generic [ref=e407]: testCase.annotations
+                - button "Copy code to clipboard" [ref=e409] [cursor=pointer]
+              - paragraph [ref=e415]:
+                - strong [ref=e416]: Type
+              - list [ref=e417]:
+                - listitem [ref=e418]:
+                  - link "Array" [ref=e419] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+                  - text: <
+                  - link "Object" [ref=e420] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Object
+                  - text: ">"
+                  - list [ref=e421]:
+                    - listitem [ref=e422]:
+                      - paragraph [ref=e423]:
+                        - code [ref=e424]: type
+                        - link "string" [ref=e425] [cursor=pointer]:
+                          - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+                      - paragraph [ref=e426]:
+                        - text: Annotation type, for example
+                        - code [ref=e427]: "'skip'"
+                        - text: or
+                        - code [ref=e428]: "'fail'"
+                        - text: .
+                    - listitem [ref=e429]:
+                      - paragraph [ref=e430]:
+                        - code [ref=e431]: description
+                        - link "string" [ref=e432] [cursor=pointer]:
+                          - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+                        - emphasis [ref=e433]: (optional)
+                      - paragraph [ref=e434]: Optional description.
+                    - listitem [ref=e435]:
+                      - paragraph [ref=e436]:
+                        - code [ref=e437]: location
+                        - link "Location" [ref=e438] [cursor=pointer]:
+                          - /url: /docs/api/class-location
+                        - emphasis [ref=e439]: (optional)
+                      - paragraph [ref=e440]: Optional location in the source where the annotation is added.
+              - separator [ref=e441]
+              - heading [level=3] [ref=e442]:
+                - text: expectedStatus
+                - link "Direct link to expectedStatus" [ref=e443] [cursor=pointer]:
+                  - /url: "#test-case-expected-status"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e444]: Expected test status.
+              - list [ref=e445]:
+                - listitem [ref=e446]:
+                  - text: Tests marked as
+                  - link "test.skip()" [ref=e447] [cursor=pointer]:
+                    - /url: /docs/api/class-test#test-skip
+                  - text: or
+                  - link "test.fixme()" [ref=e448] [cursor=pointer]:
+                    - /url: /docs/api/class-test#test-fixme
+                  - text: are expected to be
+                  - code [ref=e449]: "'skipped'"
+                  - text: .
+                - listitem [ref=e450]:
+                  - text: Tests marked as
+                  - link "test.fail()" [ref=e451] [cursor=pointer]:
+                    - /url: /docs/api/class-test#test-fail
+                  - text: are expected to be
+                  - code [ref=e452]: "'failed'"
+                  - text: .
+                - listitem [ref=e453]:
+                  - text: Other tests are expected to be
+                  - code [ref=e454]: "'passed'"
+                  - text: .
+              - paragraph [ref=e455]:
+                - text: See also
+                - link "testResult.status" [ref=e456] [cursor=pointer]:
+                  - /url: /docs/api/class-testresult#test-result-status
+                - text: for the actual status.
+              - paragraph [ref=e457]:
+                - strong [ref=e458]: Usage
+              - generic [ref=e460]:
+                - code [ref=e462]:
+                  - generic [ref=e463]: testCase.expectedStatus
+                - button "Copy code to clipboard" [ref=e465] [cursor=pointer]
+              - paragraph [ref=e471]:
+                - strong [ref=e472]: Type
+              - list [ref=e473]:
+                - listitem [ref=e474]: "\"passed\" | \"failed\" | \"timedOut\" | \"skipped\" | \"interrupted\""
+              - separator [ref=e475]
+              - heading [level=3] [ref=e476]:
+                - text: id
+                - link "Direct link to id" [ref=e477] [cursor=pointer]:
+                  - /url: "#test-case-id"
+                  - text: "#"
+              - text: "Added in: v1.25"
+              - paragraph [ref=e478]: A test ID that is computed based on the test file name, test title and project name. The ID is unique within Playwright session.
+              - paragraph [ref=e479]:
+                - strong [ref=e480]: Usage
+              - generic [ref=e482]:
+                - code [ref=e484]:
+                  - generic [ref=e485]: testCase.id
+                - button "Copy code to clipboard" [ref=e487] [cursor=pointer]
+              - paragraph [ref=e493]:
+                - strong [ref=e494]: Type
+              - list [ref=e495]:
+                - listitem [ref=e496]:
+                  - link "string" [ref=e497] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+              - separator [ref=e498]
+              - heading [level=3] [ref=e499]:
+                - text: location
+                - link "Direct link to location" [ref=e500] [cursor=pointer]:
+                  - /url: "#test-case-location"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e501]: Location in the source where the test is defined.
+              - paragraph [ref=e502]:
+                - strong [ref=e503]: Usage
+              - generic [ref=e505]:
+                - code [ref=e507]:
+                  - generic [ref=e508]: testCase.location
+                - button "Copy code to clipboard" [ref=e510] [cursor=pointer]
+              - paragraph [ref=e516]:
+                - strong [ref=e517]: Type
+              - list [ref=e518]:
+                - listitem [ref=e519]:
+                  - link "Location" [ref=e520] [cursor=pointer]:
+                    - /url: /docs/api/class-location
+              - separator [ref=e521]
+              - heading [level=3] [ref=e522]:
+                - text: parent
+                - link "Direct link to parent" [ref=e523] [cursor=pointer]:
+                  - /url: "#test-case-parent"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e524]: Suite this test case belongs to.
+              - paragraph [ref=e525]:
+                - strong [ref=e526]: Usage
+              - generic [ref=e528]:
+                - code [ref=e530]:
+                  - generic [ref=e531]: testCase.parent
+                - button "Copy code to clipboard" [ref=e533] [cursor=pointer]
+              - paragraph [ref=e539]:
+                - strong [ref=e540]: Type
+              - list [ref=e541]:
+                - listitem [ref=e542]:
+                  - link "Suite" [ref=e543] [cursor=pointer]:
+                    - /url: /docs/api/class-suite
+              - separator [ref=e544]
+              - heading [level=3] [ref=e545]:
+                - text: repeatEachIndex
+                - link "Direct link to repeatEachIndex" [ref=e546] [cursor=pointer]:
+                  - /url: "#test-case-repeat-each-index"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e547]:
+                - text: Contains the repeat index when running in "repeat each" mode. This mode is enabled by passing
+                - code [ref=e548]: "--repeat-each"
+                - text: to the
+                - link "command line" [ref=e549] [cursor=pointer]:
+                  - /url: /docs/test-cli
+                - text: .
+              - paragraph [ref=e550]:
+                - strong [ref=e551]: Usage
+              - generic [ref=e553]:
+                - code [ref=e555]:
+                  - generic [ref=e556]: testCase.repeatEachIndex
+                - button "Copy code to clipboard" [ref=e558] [cursor=pointer]
+              - paragraph [ref=e564]:
+                - strong [ref=e565]: Type
+              - list [ref=e566]:
+                - listitem [ref=e567]:
+                  - link "number" [ref=e568] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type
+              - separator [ref=e569]
+              - heading [level=3] [ref=e570]:
+                - text: results
+                - link "Direct link to results" [ref=e571] [cursor=pointer]:
+                  - /url: "#test-case-results"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e572]: Results for each run of this test.
+              - paragraph [ref=e573]:
+                - strong [ref=e574]: Usage
+              - generic [ref=e576]:
+                - code [ref=e578]:
+                  - generic [ref=e579]: testCase.results
+                - button "Copy code to clipboard" [ref=e581] [cursor=pointer]
+              - paragraph [ref=e587]:
+                - strong [ref=e588]: Type
+              - list [ref=e589]:
+                - listitem [ref=e590]:
+                  - link "Array" [ref=e591] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+                  - text: <
+                  - link "TestResult" [ref=e592] [cursor=pointer]:
+                    - /url: /docs/api/class-testresult
+                  - text: ">"
+              - separator [ref=e593]
+              - heading [level=3] [ref=e594]:
+                - text: retries
+                - link "Direct link to retries" [ref=e595] [cursor=pointer]:
+                  - /url: "#test-case-retries"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e596]: The maximum number of retries given to this test in the configuration.
+              - paragraph [ref=e597]:
+                - text: Learn more about
+                - link "test retries" [ref=e598] [cursor=pointer]:
+                  - /url: /docs/test-retries#retries
+                - text: .
+              - paragraph [ref=e599]:
+                - strong [ref=e600]: Usage
+              - generic [ref=e602]:
+                - code [ref=e604]:
+                  - generic [ref=e605]: testCase.retries
+                - button "Copy code to clipboard" [ref=e607] [cursor=pointer]
+              - paragraph [ref=e613]:
+                - strong [ref=e614]: Type
+              - list [ref=e615]:
+                - listitem [ref=e616]:
+                  - link "number" [ref=e617] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type
+              - separator [ref=e618]
+              - heading [level=3] [ref=e619]:
+                - text: tags
+                - link "Direct link to tags" [ref=e620] [cursor=pointer]:
+                  - /url: "#test-case-tags"
+                  - text: "#"
+              - text: "Added in: v1.42"
+              - paragraph [ref=e621]:
+                - text: The list of tags defined on the test or suite via
+                - link "test()" [ref=e622] [cursor=pointer]:
+                  - /url: /docs/api/class-test#test-call
+                - text: or
+                - link "test.describe()" [ref=e623] [cursor=pointer]:
+                  - /url: /docs/api/class-test#test-describe
+                - text: ", as well as"
+                - code [ref=e624]: "@"
+                - text: "-tokens extracted from test and suite titles."
+              - paragraph [ref=e625]:
+                - text: Learn more about
+                - link "test tags" [ref=e626] [cursor=pointer]:
+                  - /url: /docs/test-annotations#tag-tests
+                - text: .
+              - paragraph [ref=e627]:
+                - strong [ref=e628]: Usage
+              - generic [ref=e630]:
+                - code [ref=e632]:
+                  - generic [ref=e633]: testCase.tags
+                - button "Copy code to clipboard" [ref=e635] [cursor=pointer]
+              - paragraph [ref=e641]:
+                - strong [ref=e642]: Type
+              - list [ref=e643]:
+                - listitem [ref=e644]:
+                  - link "Array" [ref=e645] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Array
+                  - text: <
+                  - link "string" [ref=e646] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+                  - text: ">"
+              - separator [ref=e647]
+              - heading [level=3] [ref=e648]:
+                - text: timeout
+                - link "Direct link to timeout" [ref=e649] [cursor=pointer]:
+                  - /url: "#test-case-timeout"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e650]:
+                - text: The timeout given to the test. Affected by
+                - link "testConfig.timeout" [ref=e651] [cursor=pointer]:
+                  - /url: /docs/api/class-testconfig#test-config-timeout
+                - text: ","
+                - link "testProject.timeout" [ref=e652] [cursor=pointer]:
+                  - /url: /docs/api/class-testproject#test-project-timeout
+                - text: ","
+                - link "test.setTimeout()" [ref=e653] [cursor=pointer]:
+                  - /url: /docs/api/class-test#test-set-timeout
+                - text: ","
+                - link "test.slow()" [ref=e654] [cursor=pointer]:
+                  - /url: /docs/api/class-test#test-slow
+                - text: and
+                - link "testInfo.setTimeout()" [ref=e655] [cursor=pointer]:
+                  - /url: /docs/api/class-testinfo#test-info-set-timeout
+                - text: .
+              - paragraph [ref=e656]:
+                - strong [ref=e657]: Usage
+              - generic [ref=e659]:
+                - code [ref=e661]:
+                  - generic [ref=e662]: testCase.timeout
+                - button "Copy code to clipboard" [ref=e664] [cursor=pointer]
+              - paragraph [ref=e670]:
+                - strong [ref=e671]: Type
+              - list [ref=e672]:
+                - listitem [ref=e673]:
+                  - link "number" [ref=e674] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#Number_type
+              - separator [ref=e675]
+              - heading [level=3] [ref=e676]:
+                - text: title
+                - link "Direct link to title" [ref=e677] [cursor=pointer]:
+                  - /url: "#test-case-title"
+                  - text: "#"
+              - text: "Added in: v1.10"
+              - paragraph [ref=e678]:
+                - text: Test title as passed to the
+                - link "test()" [ref=e679] [cursor=pointer]:
+                  - /url: /docs/api/class-test#test-call
+                - text: call.
+              - paragraph [ref=e680]:
+                - strong [ref=e681]: Usage
+              - generic [ref=e683]:
+                - code [ref=e685]:
+                  - generic [ref=e686]: testCase.title
+                - button "Copy code to clipboard" [ref=e688] [cursor=pointer]
+              - paragraph [ref=e694]:
+                - strong [ref=e695]: Type
+              - list [ref=e696]:
+                - listitem [ref=e697]:
+                  - link "string" [ref=e698] [cursor=pointer]:
+                    - /url: https://developer.mozilla.org/en-US/docs/Web/JavaScript/Data_structures#String_type
+              - separator [ref=e699]
+              - heading [level=3] [ref=e700]:
+                - text: type
+                - link "Direct link to type" [ref=e701] [cursor=pointer]:
+                  - /url: "#test-case-type"
+                  - text: "#"
+              - text: "Added in: v1.44"
+              - paragraph [ref=e702]:
+                - text: Returns "test". Useful for detecting test cases in
+                - link "suite.entries()" [ref=e703] [cursor=pointer]:
+                  - /url: /docs/api/class-suite#suite-entries
+                - text: .
+              - paragraph [ref=e704]:
+                - strong [ref=e705]: Usage
+              - generic [ref=e707]:
+                - code [ref=e709]:
+                  - generic [ref=e710]: testCase.type
+                - button "Copy code to clipboard" [ref=e712] [cursor=pointer]
+              - paragraph [ref=e718]:
+                - strong [ref=e719]: Type
+              - list [ref=e720]:
+                - listitem [ref=e721]: "\"test\""
+          - navigation "Docs pages" [ref=e722]:
+            - link "Previous « Suite" [ref=e723] [cursor=pointer]:
+              - /url: /docs/api/class-suite
+              - generic [ref=e724]: Previous
+              - generic [ref=e725]: « Suite
+            - link "Next TestError »" [ref=e726] [cursor=pointer]:
+              - /url: /docs/api/class-testerror
+              - generic [ref=e727]: Next
+              - generic [ref=e728]: TestError »
+        - list [ref=e731]:
+          - listitem [ref=e732]:
+            - link "Methods" [ref=e733] [cursor=pointer]:
+              - /url: "#methods"
+            - list [ref=e734]:
+              - listitem [ref=e735]:
+                - link "ok" [ref=e736] [cursor=pointer]:
+                  - /url: "#test-case-ok"
+              - listitem [ref=e737]:
+                - link "outcome" [ref=e738] [cursor=pointer]:
+                  - /url: "#test-case-outcome"
+              - listitem [ref=e739]:
+                - link "titlePath" [ref=e740] [cursor=pointer]:
+                  - /url: "#test-case-title-path"
+          - listitem [ref=e741]:
+            - link "Properties" [ref=e742] [cursor=pointer]:
+              - /url: "#properties"
+            - list [ref=e743]:
+              - listitem [ref=e744]:
+                - link "annotations" [ref=e745] [cursor=pointer]:
+                  - /url: "#test-case-annotations"
+              - listitem [ref=e746]:
+                - link "expectedStatus" [ref=e747] [cursor=pointer]:
+                  - /url: "#test-case-expected-status"
+              - listitem [ref=e748]:
+                - link "id" [ref=e749] [cursor=pointer]:
+                  - /url: "#test-case-id"
+              - listitem [ref=e750]:
+                - link "location" [ref=e751] [cursor=pointer]:
+                  - /url: "#test-case-location"
+              - listitem [ref=e752]:
+                - link "parent" [ref=e753] [cursor=pointer]:
+                  - /url: "#test-case-parent"
+              - listitem [ref=e754]:
+                - link "repeatEachIndex" [ref=e755] [cursor=pointer]:
+                  - /url: "#test-case-repeat-each-index"
+              - listitem [ref=e756]:
+                - link "results" [ref=e757] [cursor=pointer]:
+                  - /url: "#test-case-results"
+              - listitem [ref=e758]:
+                - link "retries" [ref=e759] [cursor=pointer]:
+                  - /url: "#test-case-retries"
+              - listitem [ref=e760]:
+                - link "tags" [ref=e761] [cursor=pointer]:
+                  - /url: "#test-case-tags"
+              - listitem [ref=e762]:
+                - link "timeout" [ref=e763] [cursor=pointer]:
+                  - /url: "#test-case-timeout"
+              - listitem [ref=e764]:
+                - link "title" [ref=e765] [cursor=pointer]:
+                  - /url: "#test-case-title"
+              - listitem [ref=e766]:
+                - link "type" [ref=e767] [cursor=pointer]:
+                  - /url: "#test-case-type"
+  - contentinfo [ref=e768]:
+    - generic [ref=e769]:
+      - generic [ref=e770]:
+        - generic [ref=e771]:
+          - generic [ref=e772]: Learn
+          - list [ref=e773]:
+            - listitem [ref=e774]:
+              - link "Getting started" [ref=e775] [cursor=pointer]:
+                - /url: /docs/intro
+            - listitem [ref=e776]:
+              - link [ref=e777] [cursor=pointer]:
+                - /url: https://learn.microsoft.com/en-us/training/modules/build-with-playwright/
+                - text: Playwright Training
+                - img "(opens in new tab)" [ref=e778]
+            - listitem [ref=e780]:
+              - link "Learn Videos" [ref=e781] [cursor=pointer]:
+                - /url: /community/learn-videos
+            - listitem [ref=e782]:
+              - link "Feature Videos" [ref=e783] [cursor=pointer]:
+                - /url: /community/feature-videos
+        - generic [ref=e784]:
+          - generic [ref=e785]: Community
+          - list [ref=e786]:
+            - listitem [ref=e787]:
+              - link [ref=e788] [cursor=pointer]:
+                - /url: https://stackoverflow.com/questions/tagged/playwright
+                - text: Stack Overflow
+                - img "(opens in new tab)" [ref=e789]
+            - listitem [ref=e791]:
+              - link [ref=e792] [cursor=pointer]:
+                - /url: https://aka.ms/playwright/discord
+                - text: Discord
+                - img "(opens in new tab)" [ref=e793]
+            - listitem [ref=e795]:
+              - link [ref=e796] [cursor=pointer]:
+                - /url: https://x.com/playwrightweb
+                - text: X
+                - img "(opens in new tab)" [ref=e797]
+            - listitem [ref=e799]:
+              - link [ref=e800] [cursor=pointer]:
+                - /url: https://www.linkedin.com/company/playwrightweb
+                - text: LinkedIn
+                - img "(opens in new tab)" [ref=e801]
+        - generic [ref=e803]:
+          - generic [ref=e804]: More
+          - list [ref=e805]:
+            - listitem [ref=e806]:
+              - link [ref=e807] [cursor=pointer]:
+                - /url: https://github.com/microsoft/playwright
+                - text: GitHub
+                - img "(opens in new tab)" [ref=e808]
+            - listitem [ref=e810]:
+              - link [ref=e811] [cursor=pointer]:
+                - /url: https://www.youtube.com/channel/UC46Zj8pDH5tDosqm1gd7WTg
+                - text: YouTube
+                - img "(opens in new tab)" [ref=e812]
+            - listitem [ref=e814]:
+              - link [ref=e815] [cursor=pointer]:
+                - /url: https://dev.to/playwright
+                - text: Blog
+                - img "(opens in new tab)" [ref=e816]
+            - listitem [ref=e818]:
+              - link "Ambassadors" [ref=e819] [cursor=pointer]:
+                - /url: /community/ambassadors
+            - listitem [ref=e820]:
+              - link [ref=e821] [cursor=pointer]:
+                - /url: https://go.microsoft.com/fwlink/?LinkId=521839
+                - text: Microsoft Privacy Statement
+                - img "(opens in new tab)" [ref=e822]
+      - generic [ref=e824]: Copyright © 2026 Microsoft
+```
+
+# Test source
+
+```ts
+  1  | const { test, expect } = require('@playwright/test');
+  2  | 
+  3  | test('testviacodegen1', async ({ page }) => {
+  4  | 
+  5  |   await page.goto('https://playwright.dev/');
+  6  |   await page.getByRole('button', { name: 'Search (Control+k)' }).click();
+  7  |   await page.getByRole('searchbox', { name: 'Search' }).click();
+  8  |   await page.getByRole('searchbox', { name: 'Search' }).fill('testrun');
+  9  |   await page.getByRole('link', { name: 'TestRun', exact: true }).click();
+  10 |   await page.getByRole('link', { name: 'fail', exact: true }).click();
+  11 |   await page.getByRole('link', { name: 'TestCase' }).nth(1).click();
+> 12 |   await page.getByText()
+     |              ^ TypeError: Cannot read properties of undefined (reading 'unicode')
+  13 |   await page.waitForTimeout(10000);
+  14 | });
+```

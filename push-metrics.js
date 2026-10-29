@@ -31,7 +31,7 @@ function processSuite(suite) {
       for (const test of spec.tests) {
 
         const browser = test.projectName;
-
+        console.log(`Browser detected: ${browser}`);
         if (!browserMetrics[browser]) {
           browserMetrics[browser] = {
             passed: 0,
@@ -91,17 +91,16 @@ for (const file of files) {
 let metrics = '';
 
 for (const browser of Object.keys(browserMetrics)) {
-
   metrics += `
-  playwright_tests{browser="${browser}",status="passed"} ${browserMetrics[browser].passed}
-  playwright_tests{browser="${browser}",status="failed"} ${browserMetrics[browser].failed}
-  playwright_tests{browser="${browser}",status="skipped"} ${browserMetrics[browser].skipped}
+playwright_tests{browser="${browser}",status="passed"} ${browserMetrics[browser].passed}
+playwright_tests{browser="${browser}",status="failed"} ${browserMetrics[browser].failed}
+playwright_tests{browser="${browser}",status="skipped"} ${browserMetrics[browser].skipped}
 `;
 }
 
-  metrics += `
-  playwright_execution_duration_seconds{browser="chromium"} ${(duration / 1000).toFixed(2)}
-  playwright_build_status ${failed > 0 ? 0 : 1}
+metrics += `
+playwright_execution_duration_seconds ${(duration / 1000).toFixed(2)}
+playwright_build_status ${failed > 0 ? 0 : 1}
 `;
 // const metrics = `
 //   playwright_tests{browser="chromium",status="passed"} ${passed}
@@ -116,7 +115,9 @@ for (const browser of Object.keys(browserMetrics)) {
   // playwright_tests{browser="firefox",status="flaky"} ${flaky}
   // playwright_execution_duration_seconds{browser="firefox"} ${(duration / 1000).toFixed(2)}
 
+console.log('====== METRICS ======');
 console.log(metrics);
+console.log('=====================');
 
   await axios.post(
     'http://localhost:9091/metrics/job/playwright',
